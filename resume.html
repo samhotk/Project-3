@@ -1,14 +1,20 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script 
+        var saisXlsx = false;
+        var saxlsxFileLookup = {};
+        var safileData = {};
         function filledCell(cell) {
           return cell !== '' && cell != null;
         }
         function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+        if (saisXlsx && saxlsxFileLookup[filename]) {
             try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var workbook = XLSX.read(safileData[filename], { type: 'base64' });
                 var firstSheetName = workbook.SheetNames[0];
                 var worksheet = workbook.Sheets[firstSheetName];
 
@@ -35,13 +41,9 @@
                 return "";
             }
         }
-        return gk_fileData[filename] || "";
+        return safileData[filename] || "";
         }
-        </script><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</script>
     <title>Resume - Tat Ho</title>
     <link rel="stylesheet" href="styles.css">
 </head>

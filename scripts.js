@@ -1,5 +1,5 @@
 function initMap() {
-    if (!document.getElementById('map')) return;
+    if (!document.getElementById('map')) return; 
 
     const map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 22.3193, lng: 114.1694 }, // Hong Kong
